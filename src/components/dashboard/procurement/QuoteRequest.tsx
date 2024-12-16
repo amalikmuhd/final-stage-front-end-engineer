@@ -9,7 +9,6 @@ export default function QuoteRequest() {
   return (
     <div>
       <Title title="Request for Quote" desc="Fill out these details to send the RFQ" />
-
       <HStack className="flex flex-row justify-between gap-4 mt-8">
         <CustomInput disabled mainContainer="flex-1" label="RFQ-10234" placeholder="RFQ-10234" />
         <CustomInput disabled mainContainer="flex-1" label="Title" placeholder="Request for Equipments" />

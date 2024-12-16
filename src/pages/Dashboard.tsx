@@ -40,17 +40,18 @@ export function Dashboard() {
             {/* Show stepper for all steps except 0 */}
             <QoutesStepper step={steps} />
 
-            <Stack className="px-8 border border-[#E4E7EC] py-6 mt-8 rounded mx-8 mb-4">
-              {steps === 1 && <QuoteRequest />}
-              {steps === 2 && <ViewAttachments />}
-            </Stack>
-            {steps === 3 && (
-              <div>
-                <QoutesInformation title="Request Information" onEdit={false} />
-                <QoutesItems />
-                <QoutesTerms />
-              </div>
-            )}
+            {steps === 1 && <QuoteRequest />}
+            {steps === 2 && <ViewAttachments />}
+
+            <>
+              {steps === 3 && (
+                <>
+                  <QoutesInformation title="Request Information" onEdit={false} />
+                  <QoutesItems />
+                  <QoutesTerms />
+                </>
+              )}
+            </>
           </>
         )}
 
