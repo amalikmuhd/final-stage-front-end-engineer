@@ -7,13 +7,13 @@ import QoutesStepper from "../components/dashboard/procurement/Quotes/QoutesStep
 import Stack from "../components/shared/Stack";
 import Button from "../components/shared/Button";
 import { HStack } from "../components/shared/HStack";
-import Text from "../components/shared/Text";
 import QuoteRequest from "../components/dashboard/procurement/QuoteRequest";
 import ViewAttachments from "../components/dashboard/procurement/ViewAttachments";
 import QuotePending from "../components/dashboard/procurement/QuotePending";
 import { CustomModal } from "../components/Modal";
 import { LoadingModal } from "../components/LoadingModal";
 import Sidebar from "../components/sidebar/Sidebar";
+import BreadCrumb from "../components/shared/BreadCrumb";
 
 export function Dashboard() {
   const [steps, setStep] = useState(0);
@@ -36,11 +36,7 @@ export function Dashboard() {
 
         {steps != 0 && (
           <>
-            <HStack className="px-8 mt-8 flex flex-row gap-3">
-              <Text className="text-primary text-sm">Quotes</Text>
-              <Text className="text-sm">/</Text>
-              <Text className="text-sm">Response</Text>
-            </HStack>
+            <BreadCrumb />
             {/* Show stepper for all steps except 0 */}
             <QoutesStepper step={steps} />
 
