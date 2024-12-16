@@ -2,12 +2,13 @@ import ICONS from "../../../constant/icon";
 import CustomInput from "../../CustomInput";
 import Divider from "../../Divider";
 import { HStack } from "../../shared/HStack";
+import Stack from "../../shared/Stack";
 import AddItems from "./AddItem";
 import Title from "./Quotes/Title";
 
 export default function QuoteRequest() {
   return (
-    <div>
+    <Stack className="px-8 border border-[#E4E7EC] py-6 mt-8 rounded mx-8 mb-4">
       <Title title="Request for Quote" desc="Fill out these details to send the RFQ" />
       <HStack className="flex flex-row justify-between gap-4 mt-8">
         <CustomInput disabled mainContainer="flex-1" label="RFQ-10234" placeholder="RFQ-10234" />
@@ -41,6 +42,6 @@ export default function QuoteRequest() {
 
       <Divider />
       <AddItems />
-    </div>
+    </Stack>
   );
 }

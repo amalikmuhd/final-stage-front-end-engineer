@@ -3,13 +3,14 @@ import CustomInput from "../../CustomInput";
 import Divider from "../../Divider";
 import Button from "../../shared/Button";
 import { HStack } from "../../shared/HStack";
+import Stack from "../../shared/Stack";
 import Text from "../../shared/Text";
 import { VStack } from "../../shared/VStack";
 import Title from "./Quotes/Title";
 
 export default function ViewAttachments() {
   return (
-    <div>
+    <Stack className="px-8 border border-[#E4E7EC] py-6 mt-8 rounded mx-8 mb-4">
       <Title title="Terms and Attachments" desc="Provide detailed information on payment and delivery terms" />
       <HStack className="flex flex-row justify-between gap-4 mt-8">
         <CustomInput
@@ -92,6 +93,6 @@ export default function ViewAttachments() {
       </VStack>
 
       <Divider />
-    </div>
+    </Stack>
   );
 }
